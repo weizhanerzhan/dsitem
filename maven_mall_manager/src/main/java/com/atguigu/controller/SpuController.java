@@ -4,19 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
-import com.atguigu.service.OneServiceImpl;
+import com.atguigu.service.SpuServiceImpl;
 
 @Controller
-public class IndexController {
+public class SpuController {
 
 	@Autowired
-	OneServiceImpl oneService;
+	SpuServiceImpl spuService;
 	
-	@RequestMapping("index")
-	public String index(){
-		int i = oneService.testDb();
-		System.out.println(i);
-		return "manager_index";
+	@RequestMapping("goto_spu_publish")
+	public String  goto_spu_publish(){
+		
+		return "manager_spu_publish";
 	}
 }
